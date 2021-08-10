@@ -52,9 +52,9 @@
 
 ![rhZsZhGdVacAAAAASUVORK5CYII](https://user-images.githubusercontent.com/80455724/128827237-51196cf0-840f-41f4-876f-c19e30650862.png)
 
-- 그 결과, val_acc가 0.92를 기록하였으나, 이것은 동일한 물체가 train데이터와 test데이터에 함께 포함되게 split하여 나온 결과였습니다. 
+- 그 결과, val_acc가 0.92를 기록하였으나, 이것은 동일한 물체가 train데이터와 test데이터에 함께 포함되게 split하여 나온 결과 
 - 정확한 모델링을 위하여 데이터를 코드를 통하여 수동으로 split하여 다시 모델링을 진행한 결과 val_acc가 0.7가량으로 확연히 낮아짐을 확인하였습니다.
-- 모델 성능을 높이기 위하여, 카테고리별로 특징을 추출을 위한 수동라벨링을 진행하였습니다.
+- 모델 성능을 높이기 위하여, 카테고리별로 특징을 추출을 위한 수동라벨링을 진행
 
 ![unknown](https://user-images.githubusercontent.com/80455724/128831442-016b766f-5cc3-47cc-afbb-42b428fe60da.png)
 
@@ -63,22 +63,22 @@
 
 ### 1-6.  CNN modeling
 
-- 전처리한 이미지데이터의 모델링 성능을 높이기 위하여 바닐라CNN, lenet, VGGnet, Alexnet, Resnet 50, Google-net, X-ception 등을 활용하였습니다
+- 전처리한 이미지데이터의 모델링 성능을 높이기 위하여 바닐라CNN, lenet, VGGnet, Alexnet, Resnet 50, Google-net, X-ception 등을 활용
 - 가장 성능이 좋았던 모델은 X-ception모델이었으며, imagenet으로 전이학습을 한 모델보다, 일반 모델이 더 좋은 성능을 보임을 확인하였습니다.
 
 <img width="725" alt="스크린샷 2021-08-10 오후 5 38 53" src="https://user-images.githubusercontent.com/80455724/128835861-ce0e8093-ac33-4483-8412-ad263d7f0010.png">
-- 최신 모델의 경우 에포크마다 들쭉날쭉한 모습을 보이는 반면, lenet이나 바닐라cnn같은 고전적인 모델의 경우 전체적인 성능이 낮아도 에포크마다 안정적인 모습을 보여주었습니다.
+- 최신 모델의 경우 에포크마다 들쭉날쭉한 모습을 보이는 반면, lenet이나 바닐라cnn같은 고전적인 모델의 경우 전체적인 성능이 낮아도 에포크마다 안정적인 모습을 보여줌
 
 ### 1.7. Conclusion
 
 <img width="719" alt="스크린샷 2021-08-10 오후 5 15 12" src="https://user-images.githubusercontent.com/80455724/128832616-941202b0-552b-4eac-877d-768bcc9c7676.png">
 
-- 가장 높은 성능을 보여준 모델은 Xception모델로 Val_accuracy가 0.8635를 기록하였습니다. 
+- 가장 높은 성능을 보여준 모델은 Xception모델로 Val_accuracy가 0.8635를 기록
 
 ![download](https://user-images.githubusercontent.com/80455724/128834354-f50f88be-d87c-47fa-ba94-c45b790043ad.png)
 
 - 전반적으로 양호한 예측결과를 보여주었으나, 가장 오분류가 많았던 카테고리는 플라스틱과 종이였습니다.
-- 특히 종이를 플라스틱으로 오측하는 경우가 가장 많았습니다.
+- 특히 종이를 플라스틱으로 잘못 예측하는 경우가 가장 많았습니다.
 - 차후 이미지데이터를 추가하고, 카테고리별로 세부분류(종이백,우유곽 등)를 진행하여 예측성능 개선을 시도해 볼 예정입니다.
 
 ## 2. File 설명
