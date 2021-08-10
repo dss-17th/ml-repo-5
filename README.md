@@ -66,7 +66,7 @@
 - 전처리한 이미지데이터의 모델링 성능을 높이기 위하여 바닐라CNN, lenet, VGGnet, Alexnet, Resnet 50, Google-net, X-ception 등을 활용하였습니다
 - 가장 성능이 좋았던 모델은 X-ception모델이었으며, imagenet으로 전이학습을 한 모델보다, 일반 모델이 더 좋은 성능을 보임을 확인하였습니다.
 
-![unknown](https://user-images.githubusercontent.com/80455724/128831407-de296a95-d332-468c-a1f6-a70f74f74f81.png)
+<img width="725" alt="스크린샷 2021-08-10 오후 5 38 53" src="https://user-images.githubusercontent.com/80455724/128835861-ce0e8093-ac33-4483-8412-ad263d7f0010.png">
 - 최신 모델의 경우 에포크마다 들쭉날쭉한 모습을 보이는 반면, lenet이나 바닐라cnn같은 고전적인 모델의 경우 전체적인 성능이 낮아도 에포크마다 안정적인 모습을 보여주었습니다.
 
 ### 1.7. Conclusion
