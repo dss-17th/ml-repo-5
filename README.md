@@ -9,6 +9,7 @@
 
 재활용에 있어 가장 핵심적인 부분은 쓰레기의 재가공에 앞서 재활용 가능한 자원을 효율적이고 정확하게 분류하는 것입니다. 저희 팀은 이러한 쓰레기 재활용을 위한 개인적 노력의 일환으로써, 우리 일상에서 많이 볼 수 있는 재활용 쓰레기를 각종 CNN모델을 활용하여 분류하는 프로젝트를 진행해 보았습니다.
 
+
 ## 1. Abstract
 
 ### 1-1. Data 소개
@@ -42,9 +43,10 @@
 
 ### 1-5. 이미지 전처리 과정
 
-![unknown](https://user-images.githubusercontent.com/80455724/128829467-c2a8cc4b-4cf4-4916-948f-4cc9f7ea14a8.png)
+![unknown](https://user-images.githubusercontent.com/80455724/128831748-22251803-e9c9-4f9c-88b9-20ba9e4b6f48.png)
 
-- 왼쪽에 보이는 원본 이미지를, 오토라벨링을 통하여 오른쪽과 같이 오브젝트에 맞게 이미지를 크롭하였으며, 오토라벨링한 이미지로 모델링을 다시 한번 진행하였습니다.
+
+- 위쪽에 보이는 원본 이미지를, 오토라벨링을 통하여 아래와 같이 오브젝트에 맞게 이미지를 크롭하였으며, 오토라벨링한 이미지로 모델링을 다시 한번 진행하였습니다.
 
 ![rhZsZhGdVacAAAAASUVORK5CYII](https://user-images.githubusercontent.com/80455724/128827237-51196cf0-840f-41f4-876f-c19e30650862.png)
 
@@ -59,15 +61,17 @@
 
 ### 1-6.  CNN modeling
 
-![unknown](https://user-images.githubusercontent.com/80455724/128830803-f695d569-ff24-42aa-a277-816cecd1a8ad.png)
 - 전처리한 이미지데이터의 모델링 성능을 높이기 위하여 바닐라CNN, lenet, VGGnet, Alexnet, Resnet 50, Google-net, X-ception 등을 활용하였습니다
 - 가장 성능이 좋았던 모델은 X-ception모델이었으며, imagenet으로 전이학습을 한 모델보다, 일반 모델이 더 좋은 성능을 보임을 확인하였습니다.
-- 
+
 ![unknown](https://user-images.githubusercontent.com/80455724/128831407-de296a95-d332-468c-a1f6-a70f74f74f81.png)
 - 최신 모델의 경우 val_acc가 높게 나오는 등, 전반적인 성능은 높았으나 에포크마다 들쭉날쭉한 모습을 보이는 반면, lenet이나 바닐라cnn같은 고전적인 모델의 경우 전체적인 성능이 낮아도 에포크마다 안정적인 모습을 보여주었습니다.
 
 ### 1.7. Conclusion
 
+<img width="719" alt="스크린샷 2021-08-10 오후 5 15 12" src="https://user-images.githubusercontent.com/80455724/128832616-941202b0-552b-4eac-877d-768bcc9c7676.png">
+
+- 가장 높은 성능을 보여준 모델은 Xception모델로 Val_accuracy가 0.8635를 기록하였습니다. 
 
 ## 2. File 설명
 
